@@ -7,16 +7,20 @@
       "name": "The Dark Side",
       "appearance": "dark",
       "style": {
+        "predictive": "#7287FD",
+        "predictive.background": "#E6E9EF",
+        "predictive.border": "#7287FD",
         "background": "#000000",
         "editor.background": "#000000",
-        "border": "#000000",
+        "border": "#ffffff20",
+        "border.variant": "#000000",
         "status_bar.background": "#000000",
         "status_bar.foreground": "#ffffff",
         "title_bar.background": "#000000",
         "title_bar.foreground": "#ffffff",
         "tab.active_background": "#000000",
         "tab.active_foreground": "#ffffff",
-        "tab.inactive_background": "#000000",
+        "tab.inactive_background": "#ffffff20",
         "tab_bar.background": "#000000",
         "editor.gutter.background": "#000000",
         "panel.background": "#000000",
@@ -37,33 +41,46 @@
         "surface.background": "#000000",
         "modified": "#ffffff",
         "syntax": {
-          "boolean": {
-            "color": "#bd93f9"
-          },
           "comment": {
-            "color": "#6272a490",
+            "color": "#7f848e",
+            "font_style": "italic"
+          },
+          "keyword": {
+            "color": "#7755EE",
+            "font_style": "italic"
+          },
+          "string": {
+            "color": "#e5c07b",
+            "font_style": "italic"
+          },
+          "string.escape": {
+            "color": "#EA76CB",
+            "font_style": "italic"
+          },
+          "boolean": {
+            "color": "#bd93f9",
             "font_style": "italic"
           },
           "constant": {
-            "color": "#ffb86c"
+            "color": "#DC143C",
+            "font_style": "italic"
           },
-
           "number": {
-            "color": "#ff6700"
+            "color": "#ff6700",
+            "font_style": "italic"
           },
-
           "punctuation": {
             "color": "#7755EE"
           },
-
           "variable": {
             "color": "#df8e1d"
           },
-
+          "operator": {
+            "color": "#7755EE"
+          },
           "type": {
-            "color": "#f4ff00",
-            "font_style": "italic",
-            "font_weight": null
+            "color": "#9a77cf",
+            "font_style": "italic"
           }
         },
         "players": [
