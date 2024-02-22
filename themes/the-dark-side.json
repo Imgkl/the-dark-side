@@ -7,9 +7,9 @@
       "name": "The Dark Side",
       "appearance": "dark",
       "style": {
-        "predictive": "#7287FD",
+        "predictive": "#7f848e",
         "predictive.background": "#E6E9EF",
-        "predictive.border": "#7287FD",
+        "predictive.border": "#7f848e",
         "background": "#000000",
         "editor.background": "#000000",
         "border": "#ffffff20",
