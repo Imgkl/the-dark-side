@@ -1,3 +1,13 @@
+<div align="center"><img src="https://i.ibb.co/xfmZVX4/cold-smooth-tasty.jpg"/></div>
+
+## Screenshots
+
+<div align="center"><img src="https://i.ibb.co/ZmLbxsP/Screenshot-2024-02-25-at-11-28-52-AM.png"/></div>
+
+
+<div align="center"><img src="https://i.ibb.co/f2SLdm4/Screenshot-2024-02-25-at-11-29-53-AM.png"/></div>
+
+
 ## Usage
 
 ### Install via Zed Extensions
@@ -15,4 +25,4 @@
    ```
 2. Download the [the_dark_side.json](./themes/the_dark_side.json) file into the theme folder.
 3. Open Zed.
-4. Select your The Dark Side theme in the dropdown.
+4. Select your `The Dark Side theme` in the dropdown.
