@@ -6,7 +6,8 @@
 
 
 
- ![Static Badge](https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Build%20For&color=e5c07b&labelColor=363a4f) ![Static Badge](https://img.shields.io/badge/Dark%20Side-8A2BE2?style=for-the-badge&label=Join%20The&labelColor=363a4f&color=df881d)<br>![Static Badge](https://img.shields.io/badge/0.2.2-8A2BE2?style=for-the-badge&label=Version&color=9a77cf&labelColor=363a4f) 
+ ![Static Badge](https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Build%20For&color=e5c07b&labelColor=363a4f) &emsp; &emsp; ![Static Badge](https://img.shields.io/badge/Dark%20Side-8A2BE2?style=for-the-badge&label=Join%20The&labelColor=363a4f&color=df881d)
+<br><br>![Static Badge](https://img.shields.io/badge/0.2.2-8A2BE2?style=for-the-badge&label=Version&color=9a77cf&labelColor=363a4f) 
 </div>
 
 ## Screenshots
