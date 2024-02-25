@@ -7,6 +7,15 @@
       "name": "The Dark Side",
       "appearance": "dark",
       "style": {
+        "info.background": "#0C194D",
+        "info.border": "#0C194D",
+        "info.foreground": "#ffffff",
+        "warning.background": "#3A310E",
+        "warning.foreground": "#ffffff",
+        "warning.border": "#3A310E",
+        "error.background": "#4D0C0C",
+        "error.foreground": "#ffffff",
+        "error.border": "#4D0C0C",
         "predictive": "#7f848e",
         "predictive.background": "#E6E9EF",
         "predictive.border": "#7f848e",
@@ -45,16 +54,48 @@
         "surface.background": "#000000",
         "modified": "#ffffff",
         "syntax": {
+          "exception": {
+            "color": "#DC143C",
+            "font_style": "italic"
+          },
+          "type.function": {
+            "color": "#9a77cf",
+            "font_style": "italic"
+          },
+          "function.method": {
+            "color": "#DC143C",
+            "font_style": "italic"
+          },
           "comment": {
             "color": "#7f848e",
             "font_style": "italic"
           },
           "keyword": {
-            "color": "#7755EE",
+            "color": "#7725EE",
             "font_style": "italic"
           },
           "string": {
             "color": "#e5c07b",
+            "font_style": "italic"
+          },
+          "keyword.conditional": {
+            "color": "#ff6700",
+            "font_style": "italic"
+          },
+          "keyword.coroutine": {
+            "color": "#ff6700",
+            "font_style": "italic"
+          },
+          "keyword.repeat": {
+            "color": "#ff6700",
+            "font_style": "italic"
+          },
+          "keyword.exception": {
+            "color": "#DC143C",
+            "font_style": "italic"
+          },
+          "keyword.operator": {
+            "color": "#ff6700",
             "font_style": "italic"
           },
           "string.escape": {
@@ -62,28 +103,40 @@
             "font_style": "italic"
           },
           "boolean": {
-            "color": "#bd93f9",
+            "color": "#e5c07b",
             "font_style": "italic"
           },
           "constant": {
             "color": "#DC143C",
             "font_style": "italic"
           },
-          "number": {
+          "punctuation.special": {
             "color": "#ff6700",
+            "font_style": "italic"
+          },
+          "number": {
+            "color": "#e5c07b",
             "font_style": "italic"
           },
           "punctuation": {
             "color": "#7755EE"
           },
           "variable": {
-            "color": "#df8e1d"
+            "color": "#df881d"
           },
           "operator": {
             "color": "#7755EE"
           },
           "type": {
             "color": "#9a77cf",
+            "font_style": "italic"
+          },
+          "variable.builtin": {
+            "color": "#ff6700",
+            "font_style": "italic"
+          },
+          "variable.parameter": {
+            "color": "#ff6700",
             "font_style": "italic"
           }
         },

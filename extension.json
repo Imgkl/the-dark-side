@@ -1,7 +1,7 @@
 {
   "name": "The Dark Side",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "authors": ["Sai Gokula Krishnan <hi@gokula.dev>"],
-  "description": "True Dark theme for Zed",
+  "description": "*Imperial March plays in background* Join the dark side.",
   "repository": "https://github.com/Imgkl/the-dark-side"
 }
