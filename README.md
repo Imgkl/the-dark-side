@@ -1,12 +1,13 @@
 <div align="center"><img src="https://i.ibb.co/xfmZVX4/cold-smooth-tasty.jpg"/></div>
 
+
+<br>
 <div align="center">
 
 ![Static Badge](https://img.shields.io/badge/https%3A%2F%2Fgithub.com%2FImgkl%2Fthe-dark-side?style=for-the-badge&label=Join-The-Dark-Side&labelColor=363a4f&color=df881d)
 
-
-
 </div>
+
 ## Screenshots
 
 <div align="center"><img src="https://i.ibb.co/ZmLbxsP/Screenshot-2024-02-25-at-11-28-52-AM.png"/></div>
