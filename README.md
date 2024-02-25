@@ -4,8 +4,9 @@
 <br>
 <div align="center">
 
-![Static Badge](https://img.shields.io/badge/https%3A%2F%2Fgithub.com%2FImgkl%2Fthe-dark-side?style=for-the-badge&label=Join-The-Dark-Side&labelColor=363a4f&color=df881d) ![GitHub Release](https://img.shields.io/github/v/release/Imgkl/the-dark-side?style=for-the-badge&label=Version&color=9a77cf)
 
+
+ ![Static Badge](https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Build%20For&color=e5c07b&labelColor=363a4f) ![Static Badge](https://img.shields.io/badge/Dark%20Side-8A2BE2?style=for-the-badge&label=Join%20The&labelColor=363a4f&color=df881d)<br>![Static Badge](https://img.shields.io/badge/0.2.2-8A2BE2?style=for-the-badge&label=Version&color=9a77cf&labelColor=363a4f) 
 </div>
 
 ## Screenshots
