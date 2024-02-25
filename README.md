@@ -4,7 +4,7 @@
 <br>
 <div align="center">
 
-![Static Badge](https://img.shields.io/badge/https%3A%2F%2Fgithub.com%2FImgkl%2Fthe-dark-side?style=for-the-badge&label=Join-The-Dark-Side&labelColor=363a4f&color=df881d)
+![Static Badge](https://img.shields.io/badge/https%3A%2F%2Fgithub.com%2FImgkl%2Fthe-dark-side?style=for-the-badge&label=Join-The-Dark-Side&labelColor=363a4f&color=df881d) ![GitHub Release](https://img.shields.io/github/v/release/Imgkl/the-dark-side?style=for-the-badge&label=Version&color=9a77cf)
 
 </div>
 
