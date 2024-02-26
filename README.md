@@ -11,7 +11,10 @@
 
 ## Screenshots
 
-<div align="center"><img src="https://i.ibb.co/ZmLbxsP/Screenshot-2024-02-25-at-11-28-52-AM.png" width=350/><img src="https://i.ibb.co/f2SLdm4/Screenshot-2024-02-25-at-11-29-53-AM.png" width=350/></div>
+<div align="center"><img src="https://i.ibb.co/ZmLbxsP/Screenshot-2024-02-25-at-11-28-52-AM.png"/></div>
+
+
+<div align="center"><img src="https://i.ibb.co/f2SLdm4/Screenshot-2024-02-25-at-11-29-53-AM.png"/></div>
 
 
 ## Usage
