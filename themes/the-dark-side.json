@@ -49,7 +49,7 @@
         "editor.active_line.background": "#ffffff25",
         "editor.highlighted_line.background": "#000000",
         "editor.line_number": "#ffffff30",
-        "elevated_surface.background": "#000000",
+        "elevated_surface.background": "#0D0E0E",
         "elevated_surface.border": "#ffffff",
         "surface.background": "#000000",
         "modified": "#ffffff",
