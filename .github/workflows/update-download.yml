@@ -23,6 +23,7 @@ jobs:
     - name: Fetch metadata count
       id: fetch-metadata
       run: |
+        curl -s -o /dev/null "https://api.zed.dev/extensions/the-dark-side/0.2.1/download"
         API_RESPONSE=$(curl -s 'https://api.zed.dev/extensions?filter=The%20Dark%20Side')
         DOWNLOAD_COUNT=$(echo "$API_RESPONSE" | jq -r '.data[0].download_count')
         VERSION=$(echo "$API_RESPONSE" | jq -r '.data[0].version')
