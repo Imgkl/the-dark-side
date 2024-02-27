@@ -4,11 +4,12 @@
 <br>
 <div align="center">
 
-<!-- BADGES_START -->
-
-
-
-<!-- BADGES_END -->
+<!-- BADGES_START1 -->
+<!-- DOWNLOADS_BADGE_START1 -->
+<!-- DOWNLOADS_BADGE_END1 -->
+<!-- VERSION_BADGE_START1 -->
+<!-- VERSION_BADGE_END1 -->
+<!-- BADGES_END1 -->
 
 
 ![Static Badge](https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Build%20For&color=e5c07b&labelColor=363a4f)
