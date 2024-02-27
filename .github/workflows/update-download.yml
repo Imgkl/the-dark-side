@@ -40,7 +40,7 @@ jobs:
         echo "$BUILD_FOR_ZED_URL"
         echo "$DOWNLOAD_URL"
         echo "$VERSION_URL"
-        BADGES_HTML='<div align="center"><table><tr><td align="center" style="border: none;"><img src="$BUILD_FOR_ZED" /></td><td align="center" style="border: none;"><img src="$DOWNLOAD_URL" /></td><td align="center" style="border: none;"><img src="$VERSION_URL" /></td></tr></table></div>'
+        BADGES_HTML="<div align=\"center\"><table><tr><td align=\"center\" style=\"border: none;\"><img src=\"$BUILD_FOR_ZED_URL\" /></td><td align=\"center\" style=\"border: none;\"><img src=\"$DOWNLOAD_URL\" /></td><td align=\"center\" style=\"border: none;\"><img src=\"$VERSION_URL\" /></td></tr></table></div>"
         echo "::set-output name=badges_html::$BADGES_HTML"
         printf "%s\n" "$BADGES_HTML" > badges.html
         sed -i '/<!-- BADGES_PLACEHOLDER -->/r badges.html' README.md
