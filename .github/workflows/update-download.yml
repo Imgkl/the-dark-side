@@ -35,25 +35,32 @@ jobs:
         DOWNLOAD_COUNT=${{ steps.fetch-metadata.outputs.download_count }}
         VERSION=${{ steps.fetch-metadata.outputs.version }}
         VERSION_URL="https://img.shields.io/badge/version-$VERSION-8A2BE2?style=for-the-badge&label=Version&labelColor=363a4f&color=9a77cf"
-        BADGE_URL="https://img.shields.io/badge/downloads-$DOWNLOAD_COUNT-df881d?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d"
-    
-        echo "<div align=\"center\">" > badges.html
-        echo "<table style=\"border: none;\"><tr style=\"border: none;\">" >> badges.html
-        echo "<td style=\"border: none;\"><img src=\"https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Build%20For&color=e5c07b&labelColor=363a4f\" alt=\"Static Badge\"></td>" >> badges.html
-        echo "<td style=\"border: none;\"><img src=\"$BADGE_URL\" alt=\"Downloads Badge\"></td>" >> badges.html
-        echo "<td style=\"border: none;\"><img src=\"$VERSION_URL\" alt=\"Version Badge\"></td>" >> badges.html
-        echo "</tr></table>" >> badges.html
-        echo "</div>" >> badges.html
-    
-        sed -i "/<!-- BADGES_PLACEHOLDER_START -->/,/<!-- BADGES_PLACEHOLDER_END -->/{
-        /<!-- BADGES_PLACEHOLDER_START -->/b
-        /<!-- BADGES_PLACEHOLDER_END -->/b
+        DOWNLOAD_URL="https://img.shields.io/badge/downloads-$DOWNLOAD_COUNT-df881d?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d"
+        BADGES_HTML=$(cat <<EOF
+          <table><tr><td align="center" style="border: none;">
+
+          ![Static Badge](https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Build%20For&color=e5c07b&labelColor=363a4f)
+
+          </td><td align="center" style="border: none;">
+
+          ![Downloads Badge]($DOWNLOAD_URL)
+
+          </td><td align="center" style="border: none;">
+
+          ![Version Badge]($VERSION_URL)
+
+          </td></tr></table>
+          EOF
+          )
+          echo "::set-output name=badges_html::$BADGES_HTML"
 
 
-    - name: Commit and push if changed
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add README.md
-        git commit -m "Update download count badge" -a || echo "No changes to commit"
-        git push
+    - name: Update README.md with badges
+        run: |
+          BADGES_HTML="${{ steps.prepare-badges.outputs.badges_html }}"
+          sed -i "s|<!-- BADGES_PLACEHOLDER -->|$BADGES_HTML|" README.md
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "Update README with badges" -a || echo "No changes to commit"
+          git push
