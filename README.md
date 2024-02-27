@@ -40,7 +40,7 @@
    ```bash
    mkdir ~/.config/zed/themes/
    ```
-2. Download the [the_dark_side.json](./themes/the-dark-side.json) file into the theme folder.
+2. Download the [the-dark-side.json](./themes/the-dark-side.json) file into the theme folder.
 3. Open Zed.
 4. Select the `The Dark Side` theme in the dropdown.
 
