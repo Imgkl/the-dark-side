@@ -40,7 +40,7 @@ jobs:
         echo "Badge URL: $DOWNLOAD_COUNT_URL"
         echo "Version URL: $VERSION_URL"
         echo "Build for Zed URL: $BUILD_FOR_ZED_URL"
-        sed -i "/<!-- BADGES_START --> ![Build For Zed]($BUILD_FOR_ZED_URL)  ![Downloads Badge]($DOWNLOAD_COUNT_URL) ![Version Badge]($VERSION_URL) <!-- BADGES_END -->" README.md
+        sed -i "/<!-- BADGES_START -->/ ![Build For Zed]($BUILD_FOR_ZED_URL)  ![Downloads Badge]($DOWNLOAD_COUNT_URL) ![Version Badge]($VERSION_URL) \n<!-- BADGES_END -->" README.md
         sed -i "/<!-- DOWNLOADS_BADGE_START -->/,/<!-- DOWNLOADS_BADGE_END -->/c\<!-- DOWNLOADS_BADGE_START -->\n![Downloads Badge]($DOWNLOAD_COUNT_URL)\n<!-- DOWNLOADS_BADGE_END -->" README.md
         sed -i "/<!-- VERSION_BADGE_START -->/,/<!-- VERSION_BADGE_END -->/c\<!-- VERSION_BADGE_START -->\n![Version Badge]($VERSION_URL)\n<!-- VERSION_BADGE_END -->" README.md
 
