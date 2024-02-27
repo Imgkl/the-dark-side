@@ -1,4 +1,4 @@
-name: Update Download Badge
+name: Update Metadata
 
 on:
   schedule:
@@ -19,8 +19,13 @@ jobs:
       with:
         token: ${{ secrets.README }}
 
-    - name: Fetch download count
-      id: fetch-count
+    - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+    - name: Fetch metadata count
+      id: fetch-metadata
       run: |
         DOWNLOAD_COUNT=$(curl -s 'https://api.zed.dev/extensions?filter=The%20Dark%20Side' | jq -r '.data[0].download_count')
         echo "::set-output name=download_count::$DOWNLOAD_COUNT"
@@ -29,8 +34,8 @@ jobs:
 
     - name: Update README.md with download count
       run: |
-        DOWNLOAD_COUNT=${{ steps.fetch-count.outputs.download_count }}
-        VERSION=${{ steps.fetch-count.outputs.version }}
+        DOWNLOAD_COUNT=${{ steps.fetch-metadata.outputs.download_count }}
+        VERSION=${{ steps.fetch-metadata.outputs.version }}
         VERSION_URL="https://img.shields.io/badge/version-$VERSION-8A2BE2?style=for-the-badge&label=Version&labelColor=363a4f&color=9a77cf"
         BADGE_URL="https://img.shields.io/badge/downloads-$DOWNLOAD_COUNT-df881d?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d"
         echo "Badge URL: $BADGE_URL"
