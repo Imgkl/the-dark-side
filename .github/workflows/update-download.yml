@@ -23,7 +23,8 @@ jobs:
     - name: Fetch metadata count
       id: fetch-metadata
       run: |
-        DOWNLOAD_COUNT=$(curl -s 'https://api.zed.dev/extensions?filter=The%20Dark%20Side' | jq -r '.data[0].download_count')
+        API_RESPONSE=$(curl -s 'https://api.zed.dev/extensions?filter=The%20Dark%20Side')
+        DOWNLOAD_COUNT=$(echo "$API_RESPONSE" | jq -r '.data[0].download_count')
         VERSION=$(echo "$API_RESPONSE" | jq -r '.data[0].version')
         echo "::set-output name=download_count::$DOWNLOAD_COUNT"
         echo "::set-output name=version::$VERSION"
