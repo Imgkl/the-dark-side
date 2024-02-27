@@ -34,7 +34,7 @@ jobs:
       run: |
         DOWNLOAD_COUNT=${{ steps.fetch-metadata.outputs.download_count }}
         VERSION=${{ steps.fetch-metadata.outputs.version }}
-        BUILD_FOR_ZED_URL = "https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Build%20For&color=e5c07b&labelColor=363a4f"
+        BUILD_FOR_ZED_URL="https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Build%20For&color=e5c07b&labelColor=363a4f"
         DOWNLOAD_URL="https://img.shields.io/badge/downloads-$DOWNLOAD_COUNT-df881d?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d"
         VERSION_URL="https://img.shields.io/badge/version-$VERSION-8A2BE2?style=for-the-badge&label=Version&labelColor=363a4f&color=9a77cf"
         BADGES_HTML='<div align="center"><table><tr><td align="center" style="border: none;"><img src="$BUILD_FOR_ZED" /></td><td align="center" style="border: none;"><img src="$DOWNLOAD_URL" /></td><td align="center" style="border: none;"><img src="$VERSION_URL" /></td></tr></table></div>'
