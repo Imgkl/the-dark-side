@@ -30,14 +30,25 @@ jobs:
         echo "::set-output name=version::$VERSION"
         
 
-    - name: Update README.md with download count
+    - name: Update README.md with badges
       run: |
         DOWNLOAD_COUNT=${{ steps.fetch-metadata.outputs.download_count }}
         VERSION=${{ steps.fetch-metadata.outputs.version }}
         VERSION_URL="https://img.shields.io/badge/version-$VERSION-8A2BE2?style=for-the-badge&label=Version&labelColor=363a4f&color=9a77cf"
         BADGE_URL="https://img.shields.io/badge/downloads-$DOWNLOAD_COUNT-df881d?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d"
-        BADGES_HTML="<div align=\"center\">\n\n<table style=\"border: none;\"><tr style=\"border: none;\">\n<td style=\"border: none;\"><img src=\"https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Build%20For&color=e5c07b&labelColor=363a4f\" alt=\"Static Badge\"></td>\n\n<!-- DOWNLOADS_BADGE_START -->\n<td style=\"border: none;\"><img src=\"$BADGE_URL\" alt=\"Downloads Badge\"></td>\n<!-- DOWNLOADS_BADGE_END -->\n\n<!-- VERSION_BADGE_START -->\n<td style=\"border: none;\"><img src=\"$VERSION_URL\" alt=\"Version Badge\"></td>\n<!-- VERSION_BADGE_END -->\n</tr></table>\n\n</div>"
-        sed -i "/<!-- BADGES_PLACEHOLDER_START -->/,/<!-- BADGES_PLACEHOLDER_END -->/c\$BADGES_HTML" README.md
+    
+        echo "<div align=\"center\">" > badges.html
+        echo "<table style=\"border: none;\"><tr style=\"border: none;\">" >> badges.html
+        echo "<td style=\"border: none;\"><img src=\"https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Build%20For&color=e5c07b&labelColor=363a4f\" alt=\"Static Badge\"></td>" >> badges.html
+        echo "<td style=\"border: none;\"><img src=\"$BADGE_URL\" alt=\"Downloads Badge\"></td>" >> badges.html
+        echo "<td style=\"border: none;\"><img src=\"$VERSION_URL\" alt=\"Version Badge\"></td>" >> badges.html
+        echo "</tr></table>" >> badges.html
+        echo "</div>" >> badges.html
+    
+    # Use sed to insert the content of badges.html into README.md
+    sed -i "/<!-- BADGES_PLACEHOLDER_START -->/,/<!-- BADGES_PLACEHOLDER_END -->/{
+    /<!-- BADGES_PLACEHOLDER_START -->/b
+    /<!-- BADGES_PLACEHOLDER_END -->/b
 
 
     - name: Commit and push if changed
