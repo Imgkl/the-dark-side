@@ -34,9 +34,16 @@ jobs:
       run: |
         DOWNLOAD_COUNT=${{ steps.fetch-metadata.outputs.download_count }}
         VERSION=${{ steps.fetch-metadata.outputs.version }}
+        if [ "$DOWNLOAD_COUNT" -ge 1000000 ]; then
+            FORMATTED_DOWNLOAD_COUNT=$(echo "scale=1; $DOWNLOAD_COUNT/1000000" | bc)M
+        elif [ "$DOWNLOAD_COUNT" -ge 1000 ]; then
+            FORMATTED_DOWNLOAD_COUNT=$(echo "scale=1; $DOWNLOAD_COUNT/1000" | bc)K
+        else
+            FORMATTED_DOWNLOAD_COUNT=$DOWNLOAD_COUNT
+        fi
         BUILD_FOR_ZED_URL="https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Build%20For&color=e5c07b&labelColor=363a4f"
         VERSION_URL="https://img.shields.io/badge/version-$VERSION-8A2BE2?style=for-the-badge&label=Version&labelColor=363a4f&color=9a77cf"
-        DOWNLOAD_COUNT_URL="https://img.shields.io/badge/downloads-$DOWNLOAD_COUNT-df881d?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d"
+        DOWNLOAD_COUNT_URL="https://img.shields.io/badge/downloads-$FORMATTED_DOWNLOAD_COUNT-df881d?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d"
         echo "Badge URL: $DOWNLOAD_COUNT_URL"
         echo "Version URL: $VERSION_URL"
         echo "Build for Zed URL: $BUILD_FOR_ZED_URL"
