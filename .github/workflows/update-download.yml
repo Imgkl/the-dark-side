@@ -19,10 +19,6 @@ jobs:
       with:
         token: ${{ secrets.README }}
 
-    - name: Setup Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: '20'
 
     - name: Fetch metadata count
       id: fetch-metadata
