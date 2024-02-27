@@ -36,10 +36,9 @@ jobs:
         VERSION=${{ steps.fetch-metadata.outputs.version }}
         VERSION_URL="https://img.shields.io/badge/version-$VERSION-8A2BE2?style=for-the-badge&label=Version&labelColor=363a4f&color=9a77cf"
         BADGE_URL="https://img.shields.io/badge/downloads-$DOWNLOAD_COUNT-df881d?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d"
-        echo "Badge URL: $BADGE_URL"
-        echo "Version URL: $VERSION_URL"
-        sed -i "/<!-- DOWNLOADS_BADGE_START -->/,/<!-- DOWNLOADS_BADGE_END -->/c\<!-- DOWNLOADS_BADGE_START -->\n![Downloads Badge]($BADGE_URL)\n<!-- DOWNLOADS_BADGE_END -->" README.md
-        sed -i "/<!-- VERSION_BADGE_START -->/,/<!-- VERSION_BADGE_END -->/c\<!-- VERSION_BADGE_START -->\n![Version Badge]($VERSION_URL)\n<!-- VERSION_BADGE_END -->" README.md
+        BADGES_HTML="<div align=\"center\">\n\n<table style=\"border: none;\"><tr style=\"border: none;\">\n<td style=\"border: none;\"><img src=\"https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Build%20For&color=e5c07b&labelColor=363a4f\" alt=\"Static Badge\"></td>\n\n<!-- DOWNLOADS_BADGE_START -->\n<td style=\"border: none;\"><img src=\"$BADGE_URL\" alt=\"Downloads Badge\"></td>\n<!-- DOWNLOADS_BADGE_END -->\n\n<!-- VERSION_BADGE_START -->\n<td style=\"border: none;\"><img src=\"$VERSION_URL\" alt=\"Version Badge\"></td>\n<!-- VERSION_BADGE_END -->\n</tr></table>\n\n</div>"
+        sed -i "/<!-- BADGES_PLACEHOLDER_START -->/,/<!-- BADGES_PLACEHOLDER_END -->/c\$BADGES_HTML" README.md
+
 
     - name: Commit and push if changed
       run: |
