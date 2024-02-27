@@ -6,6 +6,9 @@ on:
     - cron: '*/30 * * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write # Grant write permissions to contents
+
 jobs:
   update-badge:
     runs-on: ubuntu-latest
