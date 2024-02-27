@@ -7,7 +7,7 @@
 ![Static Badge](https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Build%20For&color=e5c07b&labelColor=363a4f)
 
 <!-- DOWNLOADS_BADGE_START -->
-![Downloads Badge](https://img.shields.io/badge/downloads-2517-df881d?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d)
+![Downloads Badge](https://img.shields.io/badge/downloads-2518-df881d?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d)
 <!-- DOWNLOADS_BADGE_END -->
 
 <!-- VERSION_BADGE_START -->
