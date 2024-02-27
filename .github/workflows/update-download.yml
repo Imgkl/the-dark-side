@@ -24,6 +24,7 @@ jobs:
       run: |
         DOWNLOAD_COUNT=$(curl -s 'https://api.zed.dev/extensions?filter=The%20Dark%20Side' | jq -r '.data[0].download_count')
         echo "::set-output name=download_count::$DOWNLOAD_COUNT"
+        echo "::set-output name=version::$VERSION"
         
 
     - name: Update README.md with download count
