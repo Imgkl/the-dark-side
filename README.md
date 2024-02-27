@@ -4,6 +4,13 @@
 <br>
 <div align="center">
 
+<!-- BADGES_START -->
+
+
+
+<!-- BADGES_END -->
+
+
 ![Static Badge](https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Build%20For&color=e5c07b&labelColor=363a4f)
 
 <!-- DOWNLOADS_BADGE_START -->
