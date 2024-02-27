@@ -26,8 +26,8 @@ jobs:
         API_RESPONSE=$(curl -s 'https://api.zed.dev/extensions?filter=The%20Dark%20Side')
         DOWNLOAD_COUNT=$(echo "$API_RESPONSE" | jq -r '.data[0].download_count')
         VERSION=$(echo "$API_RESPONSE" | jq -r '.data[0].version')
-        echo "{download_count}={$DOWNLOAD_COUNT}" >> $DOWNLOAD_COUNT
-        echo "{version}={$VERSION}" >> $VERSION
+        echo "download_count=$DOWNLOAD_COUNT" >> $GITHUB_OUTPUT
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
         
 
     - name: Update README.md with download count
