@@ -56,7 +56,7 @@ jobs:
 
 
     - name: Update README.md with badges
-        run: |
+      run: |
           BADGES_HTML="${{ steps.prepare-badges.outputs.badges_html }}"
           sed -i "s|<!-- BADGES_PLACEHOLDER -->|$BADGES_HTML|" README.md
           git config --local user.email "action@github.com"
