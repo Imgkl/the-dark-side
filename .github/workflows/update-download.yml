@@ -40,7 +40,7 @@ jobs:
         echo "Badge URL: $DOWNLOAD_COUNT_URL"
         echo "Version URL: $VERSION_URL"
         echo "Build for Zed URL: $BUILD_FOR_ZED_URL"
-        sed -i "/<!-- BADGES_START -->/,/<!-- BADGES_END -->/c\<!-- BADGES_START -->\n<img src=\"$BUILD_FOR_ZED_URL\" alt=\"Build for ZED\" style=\"margin-right: 10px;\" /> <img src=\"$DOWNLOAD_COUNT_URL\" alt=\"Downloads Badge\" style=\"margin-right: 10px;\" /> <img src=\"$VERSION_URL\" alt=\"Version Badge\" />\n<!-- BADGES_END -->" README.md
+        sed -i "/<!-- BADGES_START -->/,/<!-- BADGES_END -->/c\<!-- BADGES_START -->\n![Build Status](https://example.com/build-status) &nbsp; ![Downloads Badge]($DOWNLOAD_COUNT_URL) &nbsp; ![Version Badge]($VERSION_URL)\n<!-- BADGES_END -->" README.md
 
 
     - name: Commit and push if changed
