@@ -10,7 +10,10 @@
 ![Downloads Badge](https://img.shields.io/badge/downloads-2332-df881d?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d)
 <!-- DOWNLOADS_BADGE_END -->
 
-![Static Badge](https://img.shields.io/badge/0.2.3-8A2BE2?style=for-the-badge&label=Version&color=9a77cf&labelColor=363a4f)
+<!-- VERRSION_BADGE_START-->
+![Version Badge](https://img.shields.io/badge/version-XXXX-8A2BE2?style=for-the-badge&label=Version&labelColor=363a4f&color=9a77cf)
+<!-- VERRSION_BADGE_END-->
+
 
 </div>
 
