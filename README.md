@@ -4,7 +4,7 @@
 <br>
 <div align="center">
 
- <a href="https://zed.dev/">![Static Badge](https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Build%20For&color=e5c07b&labelColor=363a4f)</a>  &emsp; https://img.shields.io/badge/downloads-2329-df881d?style=for-the-badge<!-- DOWNLOADS_BADGE_PLACEHOLDER -->label=Downloads<!-- DOWNLOADS_BADGE_PLACEHOLDER -->labelColor=363a4f<!-- DOWNLOADS_BADGE_PLACEHOLDER -->color=df881d
+ <a href="https://zed.dev/">![Static Badge](https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Build%20For&color=e5c07b&labelColor=363a4f)</a>  &emsp; ![Downloads Count](<!-- DOWNLOADS_BADGE_PLACEHOLDER -->)
 <br><br>![Static Badge](https://img.shields.io/badge/0.2.3-8A2BE2?style=for-the-badge&label=Version&color=9a77cf&labelColor=363a4f) <br>
 
 </div>
