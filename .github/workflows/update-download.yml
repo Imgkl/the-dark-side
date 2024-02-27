@@ -30,7 +30,7 @@ jobs:
         DOWNLOAD_COUNT=${{ steps.fetch-count.outputs.download_count }}
         BADGE_URL="https://img.shields.io/badge/downloads-$DOWNLOAD_COUNT-df881d?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d"
         echo "Badge URL: $BADGE_URL"
-         sed -i "s|https://img.shields.io/badge/downloads-.*-df881d?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d|$BADGE_URL|" README.md
+        sed -i "/<!-- DOWNLOADS_BADGE_START -->/,/<!-- DOWNLOADS_BADGE_END -->/c\<!-- DOWNLOADS_BADGE_START -->\n![Downloads Badge]($BADGE_URL)\n<!-- DOWNLOADS_BADGE_END -->" README.md
 
     - name: Commit and push if changed
       run: |
