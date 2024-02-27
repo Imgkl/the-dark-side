@@ -4,9 +4,19 @@
 <br>
 <div align="center">
 
+<!-- BADGES_PLACEHOLDER_START -->
+<table style="border: none;"><tr style="border: none;">
+<td style="border: none;"><img src="https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Build%20For&color=e5c07b&labelColor=363a4f" alt="Static Badge"></td>
 
-$BADGES_HTML
+<!-- DOWNLOADS_BADGE_START -->
+<td style="border: none;"><img src="https://img.shields.io/badge/downloads-2358-df881d?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d" alt="Downloads Badge"></td>
+<!-- DOWNLOADS_BADGE_END -->
 
+<!-- VERSION_BADGE_START -->
+<td style="border: none;"><img src="https://img.shields.io/badge/version-0.2.3-8A2BE2?style=for-the-badge&label=Version&labelColor=363a4f&color=9a77cf" alt="Version Badge"></td>
+<!-- VERSION_BADGE_END -->
+</tr></table>
+<!-- BADGES_PLACEHOLDER_END -->
 
 </div>
 
