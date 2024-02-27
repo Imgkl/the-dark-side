@@ -5,12 +5,7 @@
 <div align="center">
 
 <!-- BADGES_START -->
-<!-- BUILD_FOR_ZED_START -->
-<!-- BUILD_FOR_ZED_END -->
-<!-- DOWNLOADS_BADGE_START -->
-<!-- DOWNLOADS_BADGE_END -->
-<!-- VERSION_BADGE_START -->
-<!-- VERSION_BADGE_END -->
+![Build Status](https://example.com/build-status) &nbsp; ![Downloads Badge](https://img.shields.io/badge/downloads-2548-df881d?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d) &nbsp; ![Version Badge](https://img.shields.io/badge/version-0.2.3-8A2BE2?style=for-the-badge&label=Version&labelColor=363a4f&color=9a77cf)
 <!-- BADGES_END -->
 
 
