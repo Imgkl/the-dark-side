@@ -30,27 +30,21 @@ jobs:
         echo "::set-output name=version::$VERSION"
         
 
-    - name: Update README.md with badges
+    - name: Update README.md with download count
       run: |
         DOWNLOAD_COUNT=${{ steps.fetch-metadata.outputs.download_count }}
         VERSION=${{ steps.fetch-metadata.outputs.version }}
-        BUILD_FOR_ZED_URL="https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Build%20For&color=e5c07b&labelColor=363a4f"
-        DOWNLOAD_URL="https://img.shields.io/badge/downloads-$DOWNLOAD_COUNT-df881d?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d"
         VERSION_URL="https://img.shields.io/badge/version-$VERSION-8A2BE2?style=for-the-badge&label=Version&labelColor=363a4f&color=9a77cf"
-        echo "$BUILD_FOR_ZED_URL"
-        echo "$DOWNLOAD_URL"
-        echo "$VERSION_URL"
-        BADGES_HTML="<div align=\"center\"><table><tr><td align=\"center\" style=\"border: none;\"><img src=\"$BUILD_FOR_ZED_URL\" /></td><td align=\"center\" style=\"border: none;\"><img src=\"$DOWNLOAD_URL\" /></td><td align=\"center\" style=\"border: none;\"><img src=\"$VERSION_URL\" /></td></tr></table></div>"
-        echo "::set-output name=badges_html::$BADGES_HTML"
-        printf "%s\n" "$BADGES_HTML" > badges.html
-        sed -i '/<!-- BADGES_PLACEHOLDER -->/r badges.html' README.md
-        rm badges.html
-
+        BADGE_URL="https://img.shields.io/badge/downloads-$DOWNLOAD_COUNT-df881d?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d"
+        echo "Badge URL: $BADGE_URL"
+        echo "Version URL: $VERSION_URL"
+        sed -i "/<!-- DOWNLOADS_BADGE_START -->/,/<!-- DOWNLOADS_BADGE_END -->/c\<!-- DOWNLOADS_BADGE_START -->\n![Downloads Badge]($BADGE_URL)\n<!-- DOWNLOADS_BADGE_END -->" README.md
+        sed -i "/<!-- VERSION_BADGE_START -->/,/<!-- VERSION_BADGE_END -->/c\<!-- VERSION_BADGE_START -->\n![Version Badge]($VERSION_URL)\n<!-- VERSION_BADGE_END -->" README.md
 
     - name: Commit and push if changed
       run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add README.md
-          git commit -m "Update README with badges" -a || echo "No changes to commit"
-          git push
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add README.md
+        git commit -m "Update download count badge" -a || echo "No changes to commit"
+        git push
