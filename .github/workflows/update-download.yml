@@ -41,7 +41,7 @@ jobs:
         else
             FORMATTED_DOWNLOAD_COUNT=$DOWNLOAD_COUNT
         fi
-        BUILD_FOR_ZED_URL="https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Build%20For&color=e5c07b&labelColor=363a4f"
+        BUILD_FOR_ZED_URL="https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Built%20For&color=e5c07b&labelColor=363a4f"
         VERSION_URL="https://img.shields.io/badge/version-$VERSION-8A2BE2?style=for-the-badge&label=Version&labelColor=363a4f&color=9a77cf"
         DOWNLOAD_COUNT_URL="https://img.shields.io/badge/downloads-$FORMATTED_DOWNLOAD_COUNT-df881d?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d"
         echo "Badge URL: $DOWNLOAD_COUNT_URL"
