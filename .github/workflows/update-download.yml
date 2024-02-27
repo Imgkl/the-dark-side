@@ -11,12 +11,12 @@ on:
 jobs:
   update-badge:
     runs-on: ubuntu-latest
-  permissions:
-  contents: write # Grant write permissions to contents
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.README }}
 
     - name: Fetch download count
       id: fetch-count
