@@ -1,0 +1,36 @@
+name: Update Download Badge
+
+on:
+  schedule:
+    # Runs every 30 minutes
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Fetch download count
+      id: fetch-count
+      run: |
+        DOWNLOAD_COUNT=$(curl -s 'https://api.zed.dev/extensions?filter=The%20Dark%20Side' | jq -r '.data[0].download_count')
+        echo "::set-output name=download_count::$DOWNLOAD_COUNT"
+        
+
+    - name: Update README.md with download count
+      run: |
+        DOWNLOAD_COUNT=${{ steps.fetch-count.outputs.download_count }}
+        BADGE_URL="https://img.shields.io/badge/downloads-$DOWNLOAD_COUNT-8A2BE2?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d"
+        sed -i "s|DOWNLOADS_BADGE_PLACEHOLDER|$BADGE_URL|" README.md
+
+    - name: Commit and push if changed
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add README.md
+        git commit -m "Update download count badge" -a || echo "No changes to commit"
+        git push
