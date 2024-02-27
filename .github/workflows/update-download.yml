@@ -45,10 +45,9 @@ jobs:
         echo "</tr></table>" >> badges.html
         echo "</div>" >> badges.html
     
-    # Use sed to insert the content of badges.html into README.md
-    sed -i "/<!-- BADGES_PLACEHOLDER_START -->/,/<!-- BADGES_PLACEHOLDER_END -->/{
-    /<!-- BADGES_PLACEHOLDER_START -->/b
-    /<!-- BADGES_PLACEHOLDER_END -->/b
+        sed -i "/<!-- BADGES_PLACEHOLDER_START -->/,/<!-- BADGES_PLACEHOLDER_END -->/{
+        /<!-- BADGES_PLACEHOLDER_START -->/b
+        /<!-- BADGES_PLACEHOLDER_END -->/b
 
 
     - name: Commit and push if changed
