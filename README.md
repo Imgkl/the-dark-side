@@ -5,7 +5,7 @@
 <div align="center">
 
 <!-- BADGES_START -->
-![Build Status](https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Built%20For&color=e5c07b&labelColor=363a4f) &nbsp;&nbsp; ![Downloads Badge](https://img.shields.io/badge/downloads-3984-df881d?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d) &nbsp;&nbsp; ![Version Badge](https://img.shields.io/badge/version-0.2.4-8A2BE2?style=for-the-badge&label=Version&labelColor=363a4f&color=9a77cf)
+![Build Status](https://img.shields.io/badge/Zed-8A2BE2?style=for-the-badge&label=Built%20For&color=e5c07b&labelColor=363a4f) &nbsp;&nbsp; ![Downloads Badge](https://img.shields.io/badge/downloads-3986-df881d?style=for-the-badge&label=Downloads&labelColor=363a4f&color=df881d) &nbsp;&nbsp; ![Version Badge](https://img.shields.io/badge/version-0.2.4-8A2BE2?style=for-the-badge&label=Version&labelColor=363a4f&color=9a77cf)
 <!-- BADGES_END -->
 
 
