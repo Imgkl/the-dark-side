@@ -2,8 +2,8 @@ name: Update Metadata
 
 on:
   schedule:
-    # Runs every 30 minutes
-    - cron: '*/30 * * * *'
+    # Runs at 2:00 AM every day
+    - cron: '0 2 * * *'
   push:
   workflow_dispatch:
 
