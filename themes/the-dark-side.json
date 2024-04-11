@@ -77,7 +77,7 @@
         "elevated_surface.background": "#0D0E0E",
         "elevated_surface.border": "#ffffff",
         "surface.background": "#000000",
-        "modified": "#ffffff",
+        "modified": "#e5c07b",
         "syntax": {
           "exception": {
             "color": "#DC143C",
