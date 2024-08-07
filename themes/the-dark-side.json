@@ -86,11 +86,10 @@
             "type.function": {
               "color": "#9a77cf",
               "font_style": "italic"
-            },
-            {
-              "function": {
-                "color": "#ff6817",
-                "font_style": "italic"
+            },  
+            "function": {
+              "color": "#ff6817",
+              "font_style": "italic"
               }
             },
             "function.method": {
