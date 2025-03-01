@@ -1,0 +1,17 @@
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  homebrew:
+    name: Release Zed Extension
+    runs-on: ubuntu-latest
+    steps:
+      - uses: huacnlee/zed-extension-action@v1
+        with:
+          extension-name: the-dark-side
+          push-to: Imgkl/extensions
+          create-pullrequest: false
+        env:
+          COMMITTER_TOKEN: ${{ secrets.COMMITTER_TOKEN }}
