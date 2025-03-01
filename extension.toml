@@ -1,0 +1,7 @@
+id = "the-dark-side"
+name = "The Dark Side"
+version = "0.3.0"
+schema_version = 1
+authors = ["Sai Gokula Krishnan <hi@gokula.dev>"]
+description = "Join the dark side."
+repository = "https://github.com/Imgkl/the-dark-side"
