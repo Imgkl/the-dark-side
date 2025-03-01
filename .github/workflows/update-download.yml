@@ -4,7 +4,6 @@ on:
   schedule:
     # Runs at 2:00 AM every day
     - cron: '0 2 * * *'
-  push:
   workflow_dispatch:
 
 
