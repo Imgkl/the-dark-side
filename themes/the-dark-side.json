@@ -66,7 +66,7 @@
         "terminal.ansi.magenta": "#ea76cb",
         "terminal.ansi.bright_magenta": "#ea76cb",
         "terminal.ansi.dim_magenta": null,
-        "scrollbar_thumb.background": "#ffffff",
+        "scrollbar.thumb.background": "#ffffff",
         "scrollbar.thumb.hover_background": "#ffffff",
         "scrollbar.thumb.border": "#000000",
         "scrollbar.track.background": "#000000",
@@ -84,7 +84,7 @@
             "font_style": "italic"
           },
           "type.function": {
-            "color": "#9a77cf",
+            "color": "#e1ab32",
             "font_style": "italic"
           },
           "function.method": {
@@ -100,7 +100,7 @@
             "font_style": "italic"
           },
           "string": {
-            "color": "#e5c07b",
+            "color": "#e1ab32",
             "font_style": "italic"
           },
           "keyword.conditional": {
